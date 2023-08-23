@@ -1,6 +1,9 @@
 ## Tetris
 Este es un tetris clasico
+
+
 ![Tetris]([https://cdn.programiz.com/sites/tutorial2program/files/flow-network-example.png](https://www.trecebits.com/wp-content/uploads/2023/07/Juegos-de-Tetris.webp))
+
 
 
 Se puede ejecutar en un ejcutable o .exe que se encuentra en la carpeta dist
