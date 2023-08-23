@@ -54,6 +54,10 @@ class TetrisGame(arcade.Window):
         self.score = 0
         self.game_over = False
 
+        sonido = arcade.load_sound("assets/tetris_song.mp3")
+        self.background_music = arcade.Sound("assets/ghost.mp3")
+        self.background_music_player = None
+
     def draw_grid(self):
         for row in range(len(self.grid)):
             for column in range(len(self.grid[row])):
@@ -172,6 +176,13 @@ class TetrisGame(arcade.Window):
                 self.remove_completed_lines()
                 self.spawn_new_shape()
 
+    def on_show(self):
+        self.background_music_player = self.background_music.play(volume=0.5, loop=True)
+
+    def on_hide(self):
+        if self.background_music_player:
+            self.background_music_player.stop()
+            self.background_music_player = None
     def on_draw(self):
         arcade.start_render()
 
